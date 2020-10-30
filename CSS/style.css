@@ -1,0 +1,214 @@
+    /* CSS RESET */
+    li,
+    p {
+
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        text-decoration: none;
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    /* BODY */
+    body {
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+    body {
+
+        display: grid;
+        min-height: 100vh;
+        max-height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.1fr 2.7fr 0.2fr;
+        grid-template-areas:
+            "header header"
+            "main main"
+            "footer footer";
+
+
+    }
+
+
+
+
+    /* HEADER */
+
+    /* a área inteira do menu, envolvendo login e menu */
+
+    header {
+        grid-area: header;
+        display: grid;
+        background-color: #5867F0;
+        color: white;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+
+    }
+
+    /* MENU */
+    .menu {
+        display: grid;
+        /*aqui ainda é grid */
+        margin: 0.1rem;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        height: 100%;
+
+
+
+
+    }
+
+    /*configurações para como a lista do menu vai mostrar seus itens */
+    .menu-list {
+
+        display: flex;
+        /*apenas dentro da coluna do menu que é flex, aqui já mudou pq flex é melhor pra organizar items dentro de items (eu achei) */
+        place-items: center;
+        width: 100%;
+        justify-content: center;
+
+    }
+
+    /*configurações dos items (li) */
+
+    .menu-list li {
+        font-family: 'Concert One', cursive;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+
+
+    }
+
+    /*configurações para a imagem (logo) */
+    #logo {
+        align-items: center;
+        max-width: 100%;
+        height: auto;
+        justify-content: flex-end;
+    }
+
+    /* MENU LOGIN */
+
+    .login {
+        display: grid;
+        /*aqui ainda é grid*/
+        grid-column-start: 2;
+        grid-column-end: 3;
+        height: 100%;
+
+    }
+
+
+    /*configurações para como a lista do menu vai mostrar seus itens */
+
+    .login-list {
+        display: flex;
+        /* aqui ja mudou pra flex */
+        place-items: center;
+        justify-content: flex-end;
+
+
+    }
+
+    /*configurações dos items (li) */
+
+    .login-list li {
+        font-family: 'Work Sans', sans-serif;
+        margin-right: 1rem;
+    }
+
+    /* MAIN SECTION */
+    .main {
+        grid-area: main;
+        background: #FFFCDF;
+        margin: 2rem 2rem;
+
+
+    }
+
+    .publicacao p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0 22% 0 22%; /*margem para centralizar apenas o texto na main div */ 
+    }
+
+    .publicacao p, ul, ol, li {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 1.1rem;
+    }
+
+    .publicacao h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Concert One', cursive;
+        text-align: center;
+        color: #5867F0;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        grid-area: footer;
+        display: grid;
+        background: #5867F0;
+        height: 100%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-top: auto;
+
+        /* dentro dele*/
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            " .  empresa redes contato sobre . "; /* o ponto significa que é um espaço vazio*/ 
+
+    }
+
+    .footer p, ul, ol, li {
+        color: white; 
+        font-family: 'Work Sans', sans-serif;
+    }
+
+    .footer h1, h2, h3, h4, h5, h6 {
+        color: white; 
+        font-family: 'Concert One', cursive;
+    }
+.footer h2 {
+    display: inline-flex;
+
+}
+    .footer-list {
+        display: flex;
+        flex-direction: column; /*para deixar um item em cima do outro */ 
+    }
+
+    .empresa {
+        grid-area: empresa;
+    }
+
+    .redes {
+
+        grid-area: redes
+    }
+
+    .contato {
+        grid-area: contato;
+    }
+
+    .sobre {
+        grid-area: sobre;
+    }
