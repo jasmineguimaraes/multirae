@@ -35,24 +35,36 @@ require('navbar.html')
         </div>
 
         </form>
-        <div class="mainmutiroes">
-            <div class="mt">
-                <a href="www.recode.com.br">
-                    <img src="./imgs/garbage-2729608_640.jpg"></a>
-                <h3>Mutirão2</h3>
-                <p>Mutirão1</p>
-                <button type="submit">Ok</button>
-                <button type="submit">Ok</button>
-            </div>
 
-        </div>
+        <!-- mutiroes -->
+        <form action="" method="post">
 
-        <div>
+            <div class="mainmutiroes">
+                <div class="mt">
+                    <center> <input type="checkbox" id="delete-mut" name="delete-mut" value="delete-mut">
+                        <label for="delete-mut">Deletar</label><br>
+                        <!--  <input type="checkbox" id="edit-mut" name="edit-mut" value="edit-mut">
+                        <label for="edit-mut">Editar</label><br> -->
+                    </center>
 
-        </div>
-        <div class="divbtn">
-            <input type="button" class="btn2" value="Comece um mutirão">
-        </div>
+                    <input type="submit" value="Submit">
+
+                    <a href="www.recode.com.br">
+                        <img src="./imgs/garbage-2729608_640.jpg"></a>
+                    <h3>Mutirão2</h3>
+                    <p>Mutirão1</p>
+
+                </div>
+        </form>
+
+    </div>
+
+    <div>
+
+    </div>
+    <div class="divbtn">
+        <a href="./novo.php"> <input type="button" class="btn2" value="Comece um mutirão"> </a>
+    </div>
 
     </div>
 
