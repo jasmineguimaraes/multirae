@@ -2,11 +2,9 @@
 <html lang=”pt-br”>
 
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Work+Sans&display=swap" rel="stylesheet">
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="./CSS/style.css">
-    <title>Multiraê</title>
+    <?php 
+    require('header.html')
+    ?>
 
 </head>
 
@@ -17,27 +15,19 @@
         <nav class="menu">
 
 
-            <ul class="menu-list">
+            <?php 
 
-                <li> <a href="#"><img id="logo" src="./imgs/2.png"></a> </li>
-                <li> Seja um voluntário</li>
-                <li>Multirões</li>
-            </ul>
-        </nav>
-
-        <nav class="login">
-            <ul class="login-list">
-                <li>Login</li>
-                <li>Ainda não é membro?</li>
-            </ul>
+require('navbar.html')
+?>
         </nav>
     </header>
+
 
 
     <div class="main">
         <div class="publicacao">
 
-            <h1>Sobre o local:</h1>
+            <h1>Sobre o local</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore
                 magna aliqua. Gravida cum sociis natoque penatibus et magnis dis parturient. Feugiat in fermentum
@@ -293,9 +283,6 @@
         </div>
     </div>
 
-
-
-
     <div class="footer">
         <div class="empresa">
 
@@ -308,7 +295,7 @@
                 <li> a </li>
             </ul>
         </div>
-        
+
         <div class="redes">
             <h2>Segue a gente</h2>
             <ul class="footer-list">
@@ -333,7 +320,7 @@
                 <li> a </li>
             </ul>
         </div>
-        
+
         <div class="sobre">
             <h2>Sobre a Multiraê</h2>
             <ul class="footer-list">
@@ -347,3 +334,8 @@
     </div>
 
 </body>
+
+
+</body>
+
+</html>
