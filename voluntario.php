@@ -41,7 +41,7 @@ require('navbar.html')
         </div>
 
         <div class="divbtn">
-            <center><input type="button" class="btn1" value="Cadastre-se!"></center>
+            <center><a href="./cadastro.php"><input type="button" class="btn1" value="Cadastre-se!"></a></center>
         </div>
     </div>
 

@@ -11,11 +11,13 @@
 <body>
 
     <header>
+
         <nav class="menu">
+
             <?php 
 
-       require('navbar.html')
-       ?>
+require('navbar.html')
+?>
         </nav>
     </header>
 
@@ -23,40 +25,35 @@
     <div class="main">
         <div class="publicacao">
             <div class="maincadastro">
-                <h1>Cadastro</h1>
+
+                <h1>Novo mutirão</h1>
                 <center>
-                    <form action="/pagina-processa-dados-do-form" method="post" id="formulariocadastro">
+                    <form action="" method="post" id="formulariocadastro">
                         <div>
-                            <label for="nomec">Nome Completo:</label>
-                            <input type="text" placeholder="Nome" name="nomec"><br><br>
+                            <label for="titulo">Título do mutirão</label>
+                            <input type="text" placeholder="exemplo: Remoção de lixo na Rua Maria"
+                                name="titulo"><br><br>
+                        </div>
+                        <div>
+                            <label for="local">Local do mutirão</label>
+                            <input type="text" placeholder="exemplo: Penha, Rua Cintra 45" name="local"><br><br>
                         </div>
 
                         <div>
-                            <label for="cpf">CPF:</label>
-                            <input type="number" placeholder="000.000.000-00" name="cpf"><br><br>
+                            <label for="data">Data do mutirão</label>
+                            <input type="date" placeholder="" name="data"><br><br>
                         </div>
+
                         <div>
-                            <label for="telefone">Telefone:</label>
-                            <input type="number" placeholder="Escreva seu telefone aqui" name="telefone"><br><br>
+                            <label for="descricao">Descrição do mutirão</label>
+                            <input type="textarea"
+                                placeholder="exemplo: Vamos ajudar os moradores da Rua Cintra com a coleta de lixo"
+                                name="descricao"><br><br>
                         </div>
-                        <div>
-                            <label for="cep">CEP:</label>
-                            <input type="number" placeholder="00000-000" name="cep"><br><br>
-                        </div>
-                        <div>
-                            <label for="endereco">Endereço:</label>
-                            <input type="text" placeholder="Rua, Bairro, Número, Município" name="endereco"><br><br>
-                        </div>
-                        <div>
-                            <label for="email">Email:</label>
-                            <input type="text" placeholder="Email" name="email"><br><br>
-                        </div>
-                        <div>
-                            <label for="senha">Senha:</label>
-                            <input type="password" placeholder="**********" name="senha"><br><br>
-                        </div>
-                        <br><br>
                         <input type="submit" alue="Enviar" class="btn1">
+                        <div class="divbtn">
+                            <a href="./mutiroes.php"> <input type="button" class="btn1" value="Voltar"></a>
+                        </div>
             </div>
             </form>
             </center>
