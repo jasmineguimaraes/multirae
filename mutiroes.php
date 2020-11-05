@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang=”pt-br”>
 
-<head>
+    <head>
     <?php 
     require('header.html')
     ?>
 
-</head>
+    </head>
 
-<body>
+    <body>
 
     <header>
-
         <nav class="menu">
-
-
             <?php 
-
-require('navbar.html')
-?>
+            require('navbar.html')
+            ?>
         </nav>
     </header>
 
@@ -26,47 +22,39 @@ require('navbar.html')
         <div class="publicacao">
             <h1>Mutirões</h1>
         </div>
-        <div>
-            <form action="" method="post">
-                <div class="container">
-                    <input type="search" id="busca" name="q" placeholder="Buscar mutirão..." />
-                    <button type="submit">Ok</button>
-                </div>
+        
+        <div class="divbtn">
+            <center><a href="./novo.php"> <input type="button"  class="btn2" value="Comece um mutirão" ></a></center>
         </div>
-
-        </form>
 
         <!-- mutiroes -->
         <form action="" method="post">
 
+            <?php
+                require_once "back-end/conexaomultirae.php";
+
+                $sql = "select * from mutirao";
+                $result = $banco->query($sql);
+
+                if($result->num_rows > 0) {
+                    while($rows = $result->fetch_assoc()){
+            ?>
             <div class="mainmutiroes">
                 <div class="mt">
-                    <center> <input type="checkbox" id="delete-mut" name="delete-mut" value="delete-mut">
-                        <label for="delete-mut">Deletar</label><br>
-                        <!--  <input type="checkbox" id="edit-mut" name="edit-mut" value="edit-mut">
-                        <label for="edit-mut">Editar</label><br> -->
-                    </center>
-
-                    <input type="submit" value="Submit">
-
-                    <a href="www.recode.com.br">
-                        <img src="./imgs/garbage-2729608_640.jpg"></a>
-                    <h3>Mutirão2</h3>
-                    <p>Mutirão1</p>
-
+                    <img src="imagens/mutirao/<?php echo $rows["img_mut"]; ?>">
+                    <h3><?php echo $rows["titulo"]; ?></h3>
+                    <p><?php echo $rows["descricao"]; ?></p>
                 </div>
+            </div>
+            <?php
+                    }
+                } else {
+                    echo "Nenhum mutirão cadastrado!";
+                    }
+            ?>    
         </form>
-
-    </div>
-
     <div>
 
-    </div>
-    <div class="divbtn">
-        <a href="./novo.php"> <input type="button" class="btn2" value="Comece um mutirão"> </a>
-    </div>
-
-    </div>
 
     <div class="footer">
         <div class="empresa">
@@ -91,7 +79,6 @@ require('navbar.html')
                 <li> a </li>
                 <li> a </li>
             </ul>
-
         </div>
 
         <div class="contato">
@@ -119,11 +106,4 @@ require('navbar.html')
     </div>
 
 </body>
-
-
-</body>
-
-</html>
-</body>
-
 </html>

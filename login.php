@@ -28,14 +28,14 @@ require('navbar.html')
 
                 <h1>Login</h1>
                 <center>
-                    <form action="/pagina-processa-dados-do-form" method="post" id="formulariocadastro">
+                    <form action="back-end/VerificarLogin.php" method="post" id="formulariocadastro">
                         <div>
-                            <label for="name">E-mail</label>
-                            <input type="text" placeholder="email"><br><br>
+                            <label for="email_log">E-mail</label>
+                            <input type="email" placeholder="email" name="email_log"><br><br>
                         </div>
                         <div>
-                            <label for="password">Senha:</label>
-                            <input type="password" placeholder="**********"><br><br>
+                            <label for="senha_log">Senha:</label>
+                            <input type="password" placeholder="**********" name="senha_log"><br><br>
                         </div>
                         <br><br>
                         <input type="submit" alue="Enviar" class="btn1">
