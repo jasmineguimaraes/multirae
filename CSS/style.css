@@ -8,6 +8,8 @@
   color: rgb(243, 247, 192);
 }
 
+log
+
 .divbtn {
     padding-top: 1.4rem;
     align-items: center;
@@ -48,6 +50,22 @@
 }
 
 .btn2:hover {
+  background-color:#7b86eb;
+  color:white;
+}
+
+.btn3 {
+    background-color:  #5867F0;
+    color: white;
+    width: 17.2rem;
+    height: 2.3rem;
+    font-size: 1rem;
+    font-family: 'Work Sans', sans-serif;
+    border:0.5rem;
+   
+}
+
+.btn3:hover {
   background-color:#7b86eb;
   color:white;
 }
@@ -151,3 +169,4 @@ img {
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
 }
+

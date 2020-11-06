@@ -5,6 +5,14 @@
     <?php 
     require('header.html')
     ?>
+    <style>
+        .text-caixa{
+            font-size: .8em;
+            float: right;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
 
 </head>
 
@@ -18,45 +26,56 @@
        ?>
         </nav>
     </header>
+    <?php 
+        require_once "back-end/InsercaoUsuario.php";
 
+    ?>
 
     <div class="main">
         <div class="publicacao">
             <div class="maincadastro">
                 <h1>Cadastro</h1>
                 <center>
-                    <form action="/pagina-processa-dados-do-form" method="post" id="formulariocadastro">
+                    <form action="<?php echo$_SERVER['PHP_SELF'];?>" method="post" id="formulariocadastro">
+                        
                         <div>
                             <label for="nomec">Nome Completo:</label>
                             <input type="text" placeholder="Nome" name="nomec"><br><br>
                         </div>
-
                         <div>
-                            <label for="cpf">CPF:</label>
-                            <input type="number" placeholder="000.000.000-00" name="cpf"><br><br>
+                            <label for="dt_nasc">Data de Nascimento:</label>
+                            <input type="date" placeholder="Data de Nascimento" name="dt_nasc"><br><br>
                         </div>
                         <div>
-                            <label for="telefone">Telefone:</label>
-                            <input type="number" placeholder="Escreva seu telefone aqui" name="telefone"><br><br>
+                            <label for="cpf">CPF:<span class="text-caixa">Formato: 000.000.000-00</span></label>
+                            <input type="text" placeholder="000.000.000-00" name="cpf"><br><br>
                         </div>
                         <div>
-                            <label for="cep">CEP:</label>
-                            <input type="number" placeholder="00000-000" name="cep"><br><br>
+                            <label for="telefone">Telefone:<span class="text-caixa">Formato: xx-00000-0000, sem traço</span></label>
+                            <input type="number" placeholder="DDDxxxxxxxxx" name="telefone"><br><br>
                         </div>
                         <div>
-                            <label for="endereco">Endereço:</label>
-                            <input type="text" placeholder="Rua, Bairro, Número, Município" name="endereco"><br><br>
+                            <label for="cep">CEP:<span class="text-caixa">Formato: 00000-000</span></label>
+                            <input type="text" placeholder="00000-000" name="cep"><br><br>
                         </div>
                         <div>
-                            <label for="email">Email:</label>
-                            <input type="text" placeholder="Email" name="email"><br><br>
+                            <label for="endereco">Endereço:<span class="text-caixa">Formato:Rua, Número, Bairro, Município</span></label>
+                            <input type="text" placeholder="Rua, Número, Bairro, Município" name="endereco"><br><br>
+                        </div>
+                        <div>
+                            <label for="email">Email:<span class="text-caixa">Formato: Emaildeexemplo@hotmail.com</span></label>
+                            <input type="email" placeholder="Email" name="email"><br><br>
                         </div>
                         <div>
                             <label for="senha">Senha:</label>
                             <input type="password" placeholder="**********" name="senha"><br><br>
                         </div>
+                        <div>
+                            <label for="senhar">Repita a senha:</label>
+                            <input type="password" placeholder="**********" name="senhar"><br><br>
+                        </div>
                         <br><br>
-                        <input type="submit" alue="Enviar" class="btn1">
+                        <input type="submit" name="enviar-formulario" value="Enviar" class="btn1">
             </div>
             </form>
             </center>
@@ -65,53 +84,7 @@
     </div>
 
     <div class="footer">
-        <div class="empresa">
-
-            <h2>Logo</h2>
-            <ul class="footer-list">
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-        </div>
-
-        <div class="redes">
-            <h2>Segue a gente</h2>
-            <ul class="footer-list">
-
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-
-        </div>
-
-        <div class="contato">
-            <h2>Fale Conosco</h2>
-            <ul class="footer-list">
-
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-        </div>
-
-        <div class="sobre">
-            <h2>Sobre a Multiraê</h2>
-            <ul class="footer-list">
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-        </div>
+    <?php require('footer.php') ?>
     </div>
 
 </body>

@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang=”pt-br”>
 
-<head>
+    <head>
     <?php 
     require('header.html')
     ?>
 
-</head>
+    </head>
 
-<body>
+    <body>
 
     <header>
-
         <nav class="menu">
-
-
             <?php 
-
-require('navbar.html')
-?>
+            require('navbar.html')
+            ?>
         </nav>
     </header>
 
@@ -26,104 +22,45 @@ require('navbar.html')
         <div class="publicacao">
             <h1>Mutirões</h1>
         </div>
-        <div>
-            <form action="" method="post">
-                <div class="container">
-                    <input type="search" id="busca" name="q" placeholder="Buscar mutirão..." />
-                    <button type="submit">Ok</button>
-                </div>
+        
+        <div class="divbtn">
+            <center><a href="./novo.php"> <input type="button"  class="btn2" value="Comece um mutirão" ></a></center>
         </div>
-
-        </form>
 
         <!-- mutiroes -->
         <form action="" method="post">
 
             <div class="mainmutiroes">
+                <?php
+                require_once "back-end/conexaomultirae.php";
+
+                $sql = "select * from mutirao";
+                $result = $banco->query($sql);
+
+                if($result->num_rows > 0) {
+                    while($rows = $result->fetch_assoc()){
+                ?>
                 <div class="mt">
-                    <center> <input type="checkbox" id="delete-mut" name="delete-mut" value="delete-mut">
-                        <label for="delete-mut">Deletar</label><br>
-                        <!--  <input type="checkbox" id="edit-mut" name="edit-mut" value="edit-mut">
-                        <label for="edit-mut">Editar</label><br> -->
-                    </center>
-
-                    <input type="submit" value="Submit">
-
-                    <a href="www.recode.com.br">
-                        <img src="./imgs/garbage-2729608_640.jpg"></a>
-                    <h3>Mutirão2</h3>
-                    <p>Mutirão1</p>
-
+                    <h3><?php echo $rows["titulo"]; ?></h3>
+                    <p><?php echo $rows["descricao"]; ?></p>
+                    <p style="font-size:1.2em; text-align:center;position:relative;top:20px;">
+                    Data: <?php $d = explode("-", $rows['dt_mut']);
+                                echo "$d[2]/$d[1]/$d[0]";
+                            ?></p>
                 </div>
+                <?php
+                    }
+                } else {
+                    echo "Nenhum mutirão cadastrado!";
+                    }
+                ?>  
+            </div>  
         </form>
-
-    </div>
-
-    <div>
-
-    </div>
-    <div class="divbtn">
-        <a href="./novo.php"> <input type="button" class="btn2" value="Comece um mutirão"> </a>
-    </div>
-
     </div>
 
     <div class="footer">
-        <div class="empresa">
-
-            <h2>Logo</h2>
-            <ul class="footer-list">
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-        </div>
-
-        <div class="redes">
-            <h2>Segue a gente</h2>
-            <ul class="footer-list">
-
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-
-        </div>
-
-        <div class="contato">
-            <h2>Fale Conosco</h2>
-            <ul class="footer-list">
-
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-        </div>
-
-        <div class="sobre">
-            <h2>Sobre a Multiraê</h2>
-            <ul class="footer-list">
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-        </div>
+    <?php require('footer.php') ?>
     </div>
 
 </body>
-
-
-</body>
-
-</html>
-</body>
-
 </html>

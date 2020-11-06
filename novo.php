@@ -16,7 +16,8 @@
 
             <?php 
 
-require('navbar.html')
+                require('navbar.html');
+                require_once "back-end/InsercaoMutirao.php";
 ?>
         </nav>
     </header>
@@ -28,21 +29,22 @@ require('navbar.html')
 
                 <h1>Novo mutirão</h1>
                 <center>
-                    <form action="" method="post" id="formulariocadastro">
+                    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post" id="formulariocadastro"  enctype= "multipart/form-data">
                         <div>
                             <label for="titulo">Título do mutirão</label>
                             <input type="text" placeholder="exemplo: Remoção de lixo na Rua Maria"
                                 name="titulo"><br><br>
                         </div>
                         <div>
-                            <label for="local">Local do mutirão</label>
-                            <input type="text" placeholder="exemplo: Penha, Rua Cintra 45" name="local"><br><br>
+                            <label for="local_mut">Local do mutirão</label>
+                            <input type="text" placeholder="exemplo: Penha, Rua Cintra 45" name="local_mut"><br><br>
                         </div>
 
                         <div>
-                            <label for="data">Data do mutirão</label>
-                            <input type="date" placeholder="" name="data"><br><br>
+                            <label for="dt_mut">Data do mutirão</label>
+                            <input type="date" name="dt_mut"><br><br>
                         </div>
+
 
                         <div>
                             <label for="descricao">Descrição do mutirão</label>
@@ -50,7 +52,7 @@ require('navbar.html')
                                 placeholder="exemplo: Vamos ajudar os moradores da Rua Cintra com a coleta de lixo"
                                 name="descricao"><br><br>
                         </div>
-                        <input type="submit" alue="Enviar" class="btn1">
+                        <input type="submit" value="Enviar" class="btn1" name="enviar_mutirao">
                         <div class="divbtn">
                             <a href="./mutiroes.php"> <input type="button" class="btn1" value="Voltar"></a>
                         </div>
@@ -62,53 +64,7 @@ require('navbar.html')
     </div>
 
     <div class="footer">
-        <div class="empresa">
-
-            <h2>Logo</h2>
-            <ul class="footer-list">
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-        </div>
-
-        <div class="redes">
-            <h2>Segue a gente</h2>
-            <ul class="footer-list">
-
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-
-        </div>
-
-        <div class="contato">
-            <h2>Fale Conosco</h2>
-            <ul class="footer-list">
-
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-        </div>
-
-        <div class="sobre">
-            <h2>Sobre a Multiraê</h2>
-            <ul class="footer-list">
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-        </div>
+    <?php require('footer.php') ?>
     </div>
 
 </body>

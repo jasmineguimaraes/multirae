@@ -23,11 +23,11 @@
         display: grid;
         min-height: 100vh;
         max-height: auto;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
         grid-template-rows: 0.0fr 2.8fr 0.2fr;
         grid-template-areas:
-            "header header"
-            "main main"
+            "header  header "
+            " main   main  "
             "footer footer";
 
 
@@ -114,6 +114,16 @@
 
 
     }
+  
+     .login-list a {
+         text-decoration: none;
+         color: white;
+      }
+
+     .login-list a:hover {
+     /* background-color:; */
+      color: rgb(243, 247, 192);
+      }
 
     /*configurações dos items (li) */
 
@@ -126,7 +136,6 @@
     .main {
         grid-area: main;
         background: #FFFCDF;
-        margin: 2rem 2rem;
         align-items: center;
         padding-bottom: 2rem;
     }

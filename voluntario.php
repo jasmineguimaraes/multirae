@@ -25,18 +25,9 @@ require('navbar.html')
         <div class="publicacao">
 
             <h1>Seja um voluntário!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore
-                magna aliqua. Gravida cum sociis natoque penatibus et magnis dis parturient. Feugiat in fermentum
-                posuere
-                urna
-                nec tincidunt praesent. Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Id nibh tortor id
-                aliquet. Eget magna fermentum iaculis eu. Nisi est sit amet facilisis magna. Pretium fusce id velit ut.
-                Auctor
-                augue mauris augue neque gravida in. Tincidunt lobortis feugiat vivamus at augue eget arcu dictum.
-                Vulputate
-                eu
-                scelerisque felis imperdiet proin fermentum leo.</p>
+            <p>    Aqui na Multiraê, você pode se tornar voluntário e ajudar os moradores das ruas Aimara, Marques de Oliveira, Tambaú e todos os moradores de ruas vizinhas, basta cadastrar-se e comparecer na data e horário do Mutirão. Vamos ajudar quem precisa!
+            </p>
+            <br>
 
         </div>
 
@@ -46,53 +37,7 @@ require('navbar.html')
     </div>
 
     <div class="footer">
-        <div class="empresa">
-
-            <h2>Logo</h2>
-            <ul class="footer-list">
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-        </div>
-
-        <div class="redes">
-            <h2>Segue a gente</h2>
-            <ul class="footer-list">
-
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-
-        </div>
-
-        <div class="contato">
-            <h2>Fale Conosco</h2>
-            <ul class="footer-list">
-
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-        </div>
-
-        <div class="sobre">
-            <h2>Sobre a Multiraê</h2>
-            <ul class="footer-list">
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-                <li> a </li>
-            </ul>
-        </div>
+        <?php require('footer.php') ?>
     </div>
 
 </body>
