@@ -4,17 +4,6 @@ default collate utf8_unicode_ci;
 
 use bd_multirae;
 
-create table mutirao(
-id_mutirao int auto_increment,
-titulo varchar(80) unique,
-local_mut varchar(50),
-dt_mut date,
-img_mut varchar(50),
-descricao varchar(200) unique,
-data_mut datetime default now(),
-primary key(id_mutirao)
-)character set utf8 collate utf8_unicode_ci;
-
 create table cadastro_usuario(
 id_usuario int auto_increment not null,
 id_mutirao int,
@@ -33,4 +22,15 @@ primary key(id_usuario),
 constraint fk_usuario_mutirao 
 foreign key(id_mutirao) 
 references mutirao(id_mutirao)
+)character set utf8 collate utf8_unicode_ci;
+
+create table mutirao(
+id_mutirao int auto_increment,
+titulo varchar(80) unique,
+local_mut varchar(50),
+dt_mut date,
+img_mut varchar(50),
+descricao varchar(200) unique,
+data_mut datetime default now(),
+primary key(id_mutirao)
 )character set utf8 collate utf8_unicode_ci;

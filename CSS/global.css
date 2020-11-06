@@ -23,11 +23,11 @@
         display: grid;
         min-height: 100vh;
         max-height: auto;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
         grid-template-rows: 0.0fr 2.8fr 0.2fr;
         grid-template-areas:
-            "header header"
-            "main main"
+            "header  header "
+            " main   main  "
             "footer footer";
 
 

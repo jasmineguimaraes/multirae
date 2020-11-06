@@ -6,26 +6,32 @@
     $dt_mut = $_POST["dt_mut"] ?? null;
     $descricao = $_POST["descricao"] ?? null;
 
+
     if(isset($_POST['enviar_mutirao'])) {
-        $FormatosPermitidos = array("png","jpg", "jpeg", "gif");
-        $extensao = pathinfo($_FILES['img_mut']['name'], PATHINFO_EXTENSION);
+       //$FormatosPermitidos = array("png","jpg", "jpeg", "gif");
+       // $extensao = pathinfo($_FILES['img_mut']['name'], PATHINFO_EXTENSION);
 
         //Verificando se a extensão do arquivo é compatível
-        if(in_array($extensao, $FormatosPermitidos)){
-            $pasta = "imagens/mutirao/";
-            $temporario = $_FILES['img_mut']['tmp_name'];
-            $novoNome = uniqid().".$extensao";
-            $destino = "../imagens/mutirao/$novoNome";
+        //if(in_array($extensao, $FormatosPermitidos)){
+         //   $pasta = "../imagens/mutirao/";
+         //   $temporario = $_FILES['img_mut']['tmp_name'];
+          //  $novoNome = uniqid().".$extensao";
 
-            move_uploaded_file($temporario, $destino);
+           // if(move_uploaded_file($temporario, $pasta.$novoNome)){
+            //   $mensagem = "Upload Feito com sucesso!";
+            //    print($mensage);
+          //  }
 
-            //String de inserção no Banco de Dados
-            $r = "INSERT INTO mutirao (titulo, local_mut, dt_mut, img_mut, descricao) 
-            VALUES ('$titulo', '$local_mut', '$dt_mut', '$novoNome', '$descricao')";
+
+            $q = "INSERT INTO mutirao (titulo, local_mut, dt_mut, descricao) 
+            VALUES ('$titulo', '$local_mut', '$dt_mut','$descricao')";
             
             //Confirmação de inserção
-            if($banco->query($r)){
+            if($banco->query($q)){
                 echo "<h1>Cadastrado com sucesso!</h1>";
+
+
+            //String de inserção no Banco de Dados
 ?>
 
         <!DOCTYPE html>
@@ -47,13 +53,6 @@
             }
 
 
-        }else{
-            echo "
-                <script>
-                alert('Formato não pertimitido. Só aceitamos arquivos dos tipos: png, jpg, jpeg, gif')
-                </script>          
-            ";
         }
-    }
         
 ?>
