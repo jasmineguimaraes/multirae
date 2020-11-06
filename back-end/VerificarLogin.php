@@ -19,7 +19,6 @@
 
                 if($busca->num_rows > 0){
                     echo "<script>alert('PARABENS! VC ESTÁ LOGADO!!')</script>";
-                    header('Location:index.php');
                 }
                 else{
                     echo "<script>alert('LOGIN OU SENHA INCOMPATÍVEIS!')</script>";

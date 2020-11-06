@@ -9,9 +9,9 @@
             <h2>Segue a gente</h2>
             <ul class="footer-list">
 
-            <li><i class="fab fa-twitter"></i> @Multirae</li>
-                <li><i class="fab fa-instagram-square"></i> @Multirae</li>
-                <li><i class="fab fa-facebook"></i> Multirae</li>
+            <li><i class="fab fa-twitter ml-3"></i> @Multirae</li>
+                <li><i class="fab fa-instagram-square ml-3"></i> @Multirae</li>
+                <li><i class="fab fa-facebook ml-3"></i> Multirae</li>
             </ul>
 
         </div>

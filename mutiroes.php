@@ -43,7 +43,7 @@
                 <div class="mt">
                     <h3><?php echo $rows["titulo"]; ?></h3>
                     <p><?php echo $rows["descricao"]; ?></p>
-                    <p style="font-size:1.2em; text-align:center;position:relative;top:20px;">
+                    <p style="font-size:1.2em; text-align:center;position:relative;">
                     Data: <?php $d = explode("-", $rows['dt_mut']);
                                 echo "$d[2]/$d[1]/$d[0]";
                             ?></p>
