@@ -28,31 +28,29 @@
         </div>
 
         <!-- mutiroes -->
-        <form action="" method="post">
-
+        <div class="mainmutiroes">
             <?php
                 require_once "back-end/conexaomultirae.php";
 
-                $sql = "select * from mutirao";
-                $result = $banco->query($sql);
+                $sqlm = "select * from mutirao";
+                $result = $banco->query($sqlm);
 
                 if($result->num_rows > 0) {
                     while($rows = $result->fetch_assoc()){
             ?>
-            <div class="mainmutiroes">
                 <div class="mt">
                     <img src="imagens/mutirao/<?php echo $rows["img_mut"]; ?>">
                     <h3><?php echo $rows["titulo"]; ?></h3>
                     <p><?php echo $rows["descricao"]; ?></p>
                 </div>
-            </div>
             <?php
                     }
                 } else {
                     echo "Nenhum mutirão cadastrado!";
                     }
-            ?>    
-        </form>
+            ?> 
+        </div>
+               
     <div>
 
 

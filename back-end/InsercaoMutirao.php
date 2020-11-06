@@ -12,16 +12,19 @@
 
         //Verificando se a extensão do arquivo é compatível
         if(in_array($extensao, $FormatosPermitidos)){
-            $pasta = "../imagens/mutirao/";
+            $pasta = "imagens/mutirao/";
             $temporario = $_FILES['img_mut']['tmp_name'];
             $novoNome = uniqid().".$extensao";
+            $destino = "../imagens/mutirao/$novoNome";
+
+            move_uploaded_file($temporario, $destino);
 
             //String de inserção no Banco de Dados
-            $q = "INSERT INTO mutirao (titulo, local_mut, dt_mut, img_mut, descricao) 
+            $r = "INSERT INTO mutirao (titulo, local_mut, dt_mut, img_mut, descricao) 
             VALUES ('$titulo', '$local_mut', '$dt_mut', '$novoNome', '$descricao')";
             
             //Confirmação de inserção
-            if($banco->query($q)){
+            if($banco->query($r)){
                 echo "<h1>Cadastrado com sucesso!</h1>";
 ?>
 
